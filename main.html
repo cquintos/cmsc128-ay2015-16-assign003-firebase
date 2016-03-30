@@ -34,7 +34,7 @@
                     <p class="tagline center-align" id="secondTagline">You could be a <span style="color:#F9D423;">CERTIFIED</span> chef.</p>
                 </div>
             </div>
-            <div class="row" id="choiceHeaderPlaceholder">
+            <div class="row" id="stepHeaderPlaceholder">
                 <div class="col s4 center-align">
                     <p class="boldText">STEP 1</p>
                     <p class="lightText">ENTER RECIPE NAME</p>
@@ -69,7 +69,9 @@
                         <label for="recipe">Recipe</label>
                     </div>
                 </div>
-                <button id="send-mess" class="waves-effect waves-light btn-flat " onclick="goToDataBase()">BE A CHEF!!!</button>
+            </div>
+            <div class="center-align">
+                <button id="send-mess" class="waves-effect waves-light btn-flat" onclick="goToDataBase()">BE A CHEF!!!</button>
             </div>
         </div>    
         <div class="footer">
@@ -80,23 +82,31 @@
         <script src="resources/js/materialize.min.js"></script>
         <script src="resources/js/home.js"></script>
         <script>
-            var dataRef = new Firebase('https://recipe-chef-quintos.firebaseIO.com/');
+            var dataRef = new Firebase('https://recipe-chef-quintos.firebaseIO.com/');  // this is my online database
             
-            dataRef.set({
+            dataRef.set({                                                   // writes an initial data to my online database
               title: "title",
               classification: "classification",
               recipe: "recipe"
             });
-            function goToDataBase(){
-                var recipeTitle = $('#recipeName').val();
-                var recipeClassification = $('#typeOfDish').val();
-                var recipeInstructions = $('#recipe').val();
 
-                dataRef.push({
+            function goToDataBase(){                                      // function that pushes data to my data base
+                var recipeTitle = $('#recipeName').val();                 // recipe name
+                var recipeClassification = $('#typeOfDish').val();        // recipe classification
+                var recipeInstructions = $('#recipe').val();              // recipe
+
+                dataRef.push({                                            // pushes set of data
                     title: recipeTitle,
                     classification: recipeClassification,
                     recipe: recipeInstructions
                 });
+                clear();                                                  // clears text fields
+            }
+
+            function clear(){
+                $('#recipeName').val('');
+                $('#typeOfDish').val(''); 
+                $('#recipe').val('')
             }
         </script>
 </html>

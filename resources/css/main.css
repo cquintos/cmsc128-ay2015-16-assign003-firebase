@@ -64,8 +64,8 @@ div.main p#secondTagline {
 }
 /******************************************************************** TAGLINES*/
 
-/******************************************************************** CHOICE HEADER*/
-div.main div#choiceHeaderPlaceholder {
+/******************************************************************** STEP HEADER*/
+div.main div#stepHeaderPlaceholder {
   margin-top: 3em;
   margin-bottom: 0;
   width: 80%;
@@ -120,16 +120,6 @@ div.main div#content img#formLogo{
   }   
 }
 /******************************************************************** RIGHT SIDE*/
-
-div.footer {
-  position: fixed;
-  border-top: 10px solid #F9D423;
-  bottom: 0;
-  height: 10vh;
-  width: 100%;
-  background-color: #d3874a;
-}
-
 div.normal{
   width: 80%;
   height: 4.98em;
@@ -139,15 +129,22 @@ textarea#recipe{
   max-height: 15em;
 }
 
+
+/******************************************************************** FOOTER*/
+div.footer {
+  position: fixed;
+  border-top: 10px solid #F9D423;
+  bottom: 0;
+  height: 10vh;
+  width: 100%;
+  background-color: #d3874a;
+}
+
 div.box{
   background-color: rgba(0, 55, 50, .2);
 }
 
-
-
-
-
-
-
-
-
+button#send-mess{
+  width: 70%;
+  background-color: green;
+}
