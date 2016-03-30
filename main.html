@@ -5,7 +5,6 @@
         <link rel="shortcut icon" href="resources/images/chef-cook-512.png" type="image/x-icon">
         <!-- Import firebase library-->
         <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
-
         <!-- Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="resources/css/materialize.min.css"  media="screen,projection"/>
         <!-- CSS file-->
@@ -70,15 +69,34 @@
                         <label for="recipe">Recipe</label>
                     </div>
                 </div>
+                <button id="send-mess" class="waves-effect waves-light btn-flat " onclick="goToDataBase()">BE A CHEF!!!</button>
             </div>
         </div>    
         <div class="footer">
-
         </div>
         </body>
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="resources/js/jquery-2.1.4.min.js"></script>
         <script src="resources/js/materialize.min.js"></script>
         <script src="resources/js/home.js"></script>
-      
+        <script>
+            var dataRef = new Firebase('https://recipe-chef-quintos.firebaseIO.com/');
+            
+            dataRef.set({
+              title: "title",
+              classification: "classification",
+              recipe: "recipe"
+            });
+            function goToDataBase(){
+                var recipeTitle = $('#recipeName').val();
+                var recipeClassification = $('#typeOfDish').val();
+                var recipeInstructions = $('#recipe').val();
+
+                dataRef.push({
+                    title: recipeTitle,
+                    classification: recipeClassification,
+                    recipe: recipeInstructions
+                });
+            }
+        </script>
 </html>

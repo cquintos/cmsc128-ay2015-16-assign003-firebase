@@ -135,6 +135,9 @@ div.normal{
   height: 4.98em;
 }
 
+textarea#recipe{
+  max-height: 15em;
+}
 
 div.box{
   background-color: rgba(0, 55, 50, .2);
