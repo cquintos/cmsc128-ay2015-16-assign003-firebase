@@ -9,8 +9,7 @@
         <!-- Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="resources/css/materialize.min.css"  media="screen,projection"/>
         <!-- CSS file-->
-        <link href="resources/css/custom.css" rel="stylesheet">
-        <link href="resources/css/apply.css" rel="stylesheet">
+        <link href="resources/css/main.css" rel="stylesheet">
         <!-- Import icons-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
@@ -22,35 +21,13 @@
             <div class="navbar-fixed">
                     <nav class="transp" id="m">
                         <div class="nav-wrapper main-nav">
-                            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-                            <ul class="browser hide-on-med-and-down links">
-                                <li><a href="index.html" class="grey-text text-lighten-3">HOME</a></li>
-                                <li><a href="main.html" class="grey-text text-lighten-3">BE A CHEF!</a></li>
-                                <li><a href="about.html" class="grey-text text-lighten-3">ABOUT US</a></li>
-                            </ul>
-                            <ul id="dropdown" class="browser dropdown-content dropmenu">
-                                <div class="triangle"></div>
-                                <div class="dropdown-links-container">
-                                <li><a href="index.html" class="grey-text text-lighten-3">HOME</a></li>
-                                <li><a href="main.html" class="grey-text text-lighten-3">BE A CHEF!</a></li>
-                                <li><a href="about.html" class="grey-text text-lighten-3">ABOUT US</a></li>
-                                </div>
-                            </ul>
-
-                            <!-- FOR MOBILE -->
-                            <ul id="slide-out" class="mobile side-nav">
-                                <li class="no-padding"></li>
-                                <li><a href="index.html" class="grey-text text-lighten-3">HOME</a></li>
-                                <li><a href="main.html" class="grey-text text-lighten-3">BE A CHEF!</a></li>
-                                <li><a href="about.html" class="grey-text text-lighten-3">ABOUT US</a></li>
-                            </ul>
                         </div>
                     </nav>
                 </div>
         </header>
 
         <!-- 1st PAGE -->
-        <div class="apply">
+        <div class="main">
             <div class="row" id="mainHeader">
                 <h2 class="col s12 center-align">BE A CHEF NOW!</h2> 
                 <div class="taglinePlaceholder col s12"> 
@@ -59,27 +36,38 @@
                 </div>
             </div>
             <div class="row" id="choiceHeaderPlaceholder">
-                <div class="col s5 center-align">
-                    <p class="lightText">STEP 1</p>
+                <div class="col s4 center-align">
+                    <p class="boldText">STEP 1</p>
+                    <p class="lightText">ENTER RECIPE NAME</p>
                 </div>
-                <div class="col s2 center-align">
-                    <p class="lightText">STEP 2</p>
+                <div class="col s4 center-align">
+                    <p class="boldText">STEP 2</p>
+                    <p class="lightText">SELECT TYPE OF DISH</p>
                 </div>
-                <div class="col s5 center-align">
-                    <p class="lightText">STEP 3</p>
+                <div class="col s4 center-align">
+                    <p class="boldText">STEP 3</p>
+                    <p class="lightText">GIVE THE INSTRUCTIONS MASTER CHEF</p>
                 </div>
             </div>
             <div class="row" id="content">
-                <div class="col l6 m6 s6">
-                    <div class="row">
-                        <div class="col s12 center-align">
+                <div class="col s4 center-align box">
+                    <div class="input-field normal">
+                        <input id="recipeName" type="text" class="validate" name="senderName">
+                        <label for="recipeName">Recipe Name</label>
+                    </div>
+                </div>
+                <div class="col s4 center-align box">
+                    <div class="input-field">
+                        <div class="input-field normal">
+                            <input id="typeOfDish" type="text" class="validate" name="senderName">
+                            <label for="typeOfDish">Type of Dish</label>
                         </div>
-                        <div class="leftContent col s12 center-align">
-                            
-                        </div>
-                        <div class="leftContent col s12 center-align">
-                            
-                        </div>
+                    </div>
+                </div>
+                <div class="col s4 center-align box">
+                    <div class="input-field">
+                        <textarea class="materialize-textarea" id="recipe"></textarea>
+                        <label for="recipe">Recipe</label>
                     </div>
                 </div>
             </div>
@@ -89,10 +77,8 @@
         </div>
         </body>
         <!--Import jQuery before materialize.js-->
-
         <script type="text/javascript" src="resources/js/jquery-2.1.4.min.js"></script>
         <script src="resources/js/materialize.min.js"></script>
-        <script src="resources/js/jquery.panelSnap.js"></script>
         <script src="resources/js/home.js"></script>
       
 </html>

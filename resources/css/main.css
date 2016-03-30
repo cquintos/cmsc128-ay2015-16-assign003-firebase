@@ -11,6 +11,13 @@ body {
   -o-background-size: cover;
   background-size: cover;
   background-color: #990100;
+  overflow-x: hidden;
+  font-size: 160%;
+}
+
+nav.transp{
+  background-color: transparent;
+  box-shadow: none;
 }
 
 header {
@@ -18,18 +25,18 @@ header {
   background-color: #d3874a;
 }
 
-div.apply h2 {
+div.main h2 {
   letter-spacing: .2em;
 }
 
-div.apply p {
+div.main p {
   margin: 0;
 }
 /******************************************************************** GENERAL CSS*/
 
 
 /******************************************************************** MAIN DIVISION*/
-div.apply {
+div.main {
   margin: 0;
   padding: 0;
   position: relative;
@@ -38,83 +45,81 @@ div.apply {
 /******************************************************************** MAIN DIVISION*/
 
 /******************************************************************** TAGLINES*/
-div.apply div#mainHeader{
-  margin-top: 2em;
+div.main div#mainHeader{
+  margin-top: 0.5em;
 }
-div.apply div.taglinePlaceholder {
+
+div.main div.taglinePlaceholder {
   position: relative;
-  margin-top: 1.5em;
   padding:0 1em; 
 }
 
-div.apply p.tagline {
+div.main p.tagline {
   letter-spacing: 0.18em;
   font-size: 0.72em;
 }
 
-div.apply p#secondTagline {
+div.main p#secondTagline {
   margin-top: 1.77em;
 }
 /******************************************************************** TAGLINES*/
 
 /******************************************************************** CHOICE HEADER*/
-div.apply div#choiceHeaderPlaceholder {
-  margin-top: 3.1em;
+div.main div#choiceHeaderPlaceholder {
+  margin-top: 3em;
   margin-bottom: 0;
   width: 80%;
   position: relative;
 }
 
-div.apply p.lightText {
+div.main p.boldText {
   font-weight: light;
   font-size: 1.2em;
   letter-spacing: 0.05em;
 }
 
+div.main p.lightText {
+  font-weight: light;
+  font-size: 0.7em;
+  letter-spacing: 0.05em;
+}
+
 @media only screen and (max-width: 1100px){
-  div.apply p.lightText {
+  div.main p.lightText {
     font-size: 0.7em;
   }   
 }
 @media only screen and (max-width: 900px){
-  div.apply p.lightText {
+  div.main p.lightText {
     font-size: 0.6em;
   }   
 }
 /******************************************************************** CONTENT*/
-div.apply div#content {
+div.main div#content {
   position: relative;
   margin-top: 0.6em;
+  width: 80%;
+  padding: 0.2em;
 }
 /******************************************************************** LEFT SIDE*/
-div.apply div#content div.leftContent {
-  margin-top: 1.8em;
-}
-div.apply div#content img#formLogo{
+
+div.main div#content img#formLogo{
   width:3.5em;
   height:3.5em; 
 }
 @media only screen and (max-width: 1100px){
-  div.apply div#content img#formLogo{
+  div.main div#content img#formLogo{
     width:3.5em;
     height:3.5em; 
   }   
 }
 @media only screen and (max-width: 900px){
-  div.apply div#content img#formLogo{
+  div.main div#content img#formLogo{
     width:3.5em;
     height:3.5em; 
   }   
 }
 /******************************************************************** RIGHT SIDE*/
-div.apply div#box {
-  margin-left: 14%;
-  background-color: #ffffff;
-  opacity: 0.4;
-    width: 65%;
-    height: 28vh; 
-}
-
 
 div.footer {
   position: fixed;
@@ -125,7 +130,15 @@ div.footer {
   background-color: #d3874a;
 }
 
+div.normal{
+  width: 80%;
+  height: 4.98em;
+}
 
+
+div.box{
+  background-color: rgba(0, 55, 50, .2);
+}
 
 
 
