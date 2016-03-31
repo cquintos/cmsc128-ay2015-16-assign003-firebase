@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Chef Recipe!!!</title>
+        <title>BE A CHEF</title>
         <link rel="shortcut icon" href="resources/images/chef-cook-512.png" type="image/x-icon">
         <!-- Import firebase library-->
         <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
@@ -25,12 +25,12 @@
                 </div>
         </header>
 
-        <!-- 1st PAGE -->
+        <!-- MAIN PAGE -->
         <div class="main">
             <div class="row" id="mainHeader">
                 <h2 class="col s12 center-align">BE A CHEF NOW!</h2> 
                 <div class="taglinePlaceholder col s12"> 
-                    <p class="col s12 tagline center-align">With this <span style="color:#F9D423;">EASY</span> steps.</p>
+                    <p class="col s12 tagline center-align">With these <span style="color:#F9D423;">EASY</span> steps.</p>
                     <p class="tagline center-align" id="secondTagline">You could be a <span style="color:#F9D423;">CERTIFIED</span> chef.</p>
                 </div>
             </div>
@@ -70,6 +70,7 @@
                     </div>
                 </div>
             </div>
+            <!-- SUBMIT BUTTON -->
             <div class="center-align">
                 <button id="send-mess" class="waves-effect waves-light btn-flat" onclick="goToDataBase()">BE A CHEF!!!</button>
             </div>
@@ -83,12 +84,6 @@
         <script src="resources/js/home.js"></script>
         <script>
             var dataRef = new Firebase('https://recipe-chef-quintos.firebaseIO.com/');  // this is my online database
-            
-            dataRef.set({                                                   // writes an initial data to my online database
-              title: "title",
-              classification: "classification",
-              recipe: "recipe"
-            });
 
             function goToDataBase(){                                      // function that pushes data to my data base
                 var recipeTitle = $('#recipeName').val();                 // recipe name
@@ -101,6 +96,7 @@
                     recipe: recipeInstructions
                 });
                 clear();                                                  // clears text fields
+                alert("Recipe Submitted!");
             }
 
             function clear(){

@@ -101,34 +101,25 @@ div.main div#content {
   width: 80%;
   padding: 0.2em;
 }
-/******************************************************************** LEFT SIDE*/
 
-div.main div#content img#formLogo{
-  width:3.5em;
-  height:3.5em; 
-}
-@media only screen and (max-width: 1100px){
-  div.main div#content img#formLogo{
-    width:3.5em;
-    height:3.5em; 
-  }   
-}
-@media only screen and (max-width: 900px){
-  div.main div#content img#formLogo{
-    width:3.5em;
-    height:3.5em; 
-  }   
-}
-/******************************************************************** RIGHT SIDE*/
 div.normal{
   width: 80%;
   height: 4.98em;
 }
 
 textarea#recipe{
-  max-height: 15em;
+  max-height: 10em;
 }
 
+div.box{
+  background-color: rgba(0, 55, 50, .2);
+}
+
+button#send-mess{
+  width: 70%;
+  background-color: green;
+  color:white;
+}
 
 /******************************************************************** FOOTER*/
 div.footer {
@@ -140,11 +131,3 @@ div.footer {
   background-color: #d3874a;
 }
 
-div.box{
-  background-color: rgba(0, 55, 50, .2);
-}
-
-button#send-mess{
-  width: 70%;
-  background-color: green;
-}
